@@ -1,5 +1,6 @@
 # Use node Docker image, version 16-alpine
-FROM quay.io/upslopeio/node-alpine
+#FROM quay.io/upslopeio/node-alpine
+FROM node:18-slim
 
 # From the documentation, "The WORKDIR instruction sets the working directory for any
 # RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile"
