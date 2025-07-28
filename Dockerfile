@@ -11,6 +11,8 @@ RUN npm config set cache /tmp/.npm
 # COPY package.json and package-lock.json into root of WORKDIR
 COPY package*.json ./
 
+ENV npm_config_cache=/tmp/.npm
+
 # Executes commands
 RUN npm ci
 
