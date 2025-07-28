@@ -6,6 +6,9 @@ FROM docker.io/guergeiro/pnpm:20-10-slim
 # RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile"
 WORKDIR /usr/src/app
 
+#追記しました
+ENV npm_config_cache=/tmp/.npm
+
 # COPY package.json and package-lock.json into root of WORKDIR
 COPY package*.json ./
 
