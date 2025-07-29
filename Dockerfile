@@ -1,5 +1,5 @@
 # Use node Docker image, version 16-alpine
-FROM quay.io/upslopeio/node-alpine
+FROM node:22
 #FROM node:18-slim
 
 # From the documentation, "The WORKDIR instruction sets the working directory for any
