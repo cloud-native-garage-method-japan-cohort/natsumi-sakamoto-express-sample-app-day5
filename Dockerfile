@@ -10,13 +10,10 @@ WORKDIR /usr/src/app
 # COPY package.json and package-lock.json into root of WORKDIR
 COPY package*.json ./
 
-RUN npm config set cache /usr/src/app/.npm --global
-
-
 # Executes commands
-#RUN npm ci
-RUN mkdir /usr/src/app/.npm && chown -R 1000830001:1000830001 /usr/src/app/.npm && npm ci
-USER 1000830001
+RUN npm ci
+#RUN mkdir /usr/src/app/.npm && chown -R 1000830001:1000830001 /usr/src/app/.npm && npm ci
+#USER 1000830001
 
 
 # Copies files from source to destination, in this case the root of the build context
