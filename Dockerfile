@@ -1,18 +1,18 @@
 # Use node Docker image, version 16-alpine
-#FROM quay.io/upslopeio/node-alpine
-FROM node:18-slim
+FROM quay.io/upslopeio/node-alpine
+#FROM node:18-slim
 
 # From the documentation, "The WORKDIR instruction sets the working directory for any
 # RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile"
 WORKDIR /usr/src/app
 
 #追記しました
-RUN npm config set cache /tmp/.npm
+#RUN npm config set cache /tmp/.npm
 
 # COPY package.json and package-lock.json into root of WORKDIR
 COPY package*.json ./
 
-ENV npm_config_cache=/tmp/.npm
+#ENV npm_config_cache=/tmp/.npm
 
 # Executes commands
 RUN npm ci
