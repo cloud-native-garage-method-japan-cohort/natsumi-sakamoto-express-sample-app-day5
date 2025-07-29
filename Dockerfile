@@ -15,7 +15,9 @@ COPY package*.json ./
 #ENV npm_config_cache=/tmp/.npm
 
 # Executes commands
-RUN npm ci
+#RUN npm ci
+RUN mkdir /.npm && chown -R 1000830001:1000830001 /.npm && npm ci
+USER 1000830001
 
 # Copies files from source to destination, in this case the root of the build context
 # into the root of the WORKDIR
