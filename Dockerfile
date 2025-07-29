@@ -1,6 +1,7 @@
 # Use node Docker image, version 16-alpine
-FROM node:22
+#FROM node:22
 #FROM node:18-slim
+FROM docker.io/guergeiro/pnpm:20-10-slim
 
 # From the documentation, "The WORKDIR instruction sets the working directory for any
 # RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile"
