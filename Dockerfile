@@ -10,7 +10,8 @@ WORKDIR /usr/src/app
 # COPY package.json and package-lock.json into root of WORKDIR
 COPY package*.json ./
 
-#ENV npm_config_cache=/tmp/.npm
+RUN npm config set cache /usr/src/app/.npm --global
+
 
 # Executes commands
 #RUN npm ci
